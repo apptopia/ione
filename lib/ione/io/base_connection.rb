@@ -12,7 +12,7 @@ module Ione
         @state = :connecting
         @writable = false
         @lock = Mutex.new
-        @write_buffer = ByteBuffer.new
+        @write_buffer = Ione.new_buffer
         @closed_promise = Promise.new
       end
 
