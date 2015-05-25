@@ -21,7 +21,7 @@ module Ione
         @writable = false
         @lock = Mutex.new
         @data_listener = nil
-        @write_buffer = ByteBuffer.new
+        @write_buffer = Ione.new_buffer
         @closed_promise = Promise.new
       end
 
